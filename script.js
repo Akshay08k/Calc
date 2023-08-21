@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   for (item of buttons) {
     item.addEventListener("click", (e) => {
       let buttonText = e.target.innerText;
-      console.log("Button text is ", buttonText);
       if (buttonText == "X") {
         buttonText = "*";
         screenValue += buttonText;
