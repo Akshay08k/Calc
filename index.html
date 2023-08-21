@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Calculator</h1>
-      <div class="calculator">
-        <input class="screen" type="text" name="screen" id="screen" disabled>
-        <table>
-          <tr>
-            <td><button>(</button></td>
-            <td><button>)</button></td>
-            <td><button>C</button></td>
-            <td><button>%</button></td>
-          </tr>
-          <tr>
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>X</button></td>
-          </tr>
-          <tr>
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>-</button></td>
-          </tr>
-          <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
-          </tr>
-          <tr>
-            <td><button>0</button></td>
-            <td><button>.</button></td>
-            <td colspan="2"><button>=</button></td>
-          </tr>
-        </table>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="box">
+    <input type="text" name="Screen" id="scn" disabled>
+    <div class="keys">
+      <div class="first">
+        <button class="aqua">(</button>
+        <button class="aqua">)</button>
+        <button class="aqua">C</button>
+        <button class="orng">Del</button>
+      </div>
+      <div class="second">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="orng">%</button>
+      </div>
+      <div class="third">
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="orng">X</button>
+      </div>
+      <div class="fourth">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="orng">-</button>
+      </div>
+      <div class="fifth">
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+        <button class="orng">+</button>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
