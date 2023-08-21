@@ -1,24 +1,26 @@
-// Get the input element
-document.addEventListener("DOMContentLoaded", function() {
-const screen = document.getElementById("scn");
-// Attach event listener to the keys
-document.querySelector(".keys").addEventListener("click", function (event) {
-  if (event.target.tagName === "button") {
-    const buttonText = event.target.textContent;
-    if (buttonText === "C") {
-       
-      screen.value = "";
-    } else if (buttonText === "Del") {
-      screen.value = screen.value.slice(0, -1);
-    } else if (buttonText === "=") {
-      try {
-        screen.value = eval(screen.value);
-      } catch (error) {
-        screen.value = "Error";
-      }
-    } else {
-      screen.value += buttonText;
+document.addEventListener("DOMContentLoaded", function () {
+    let screen = document.getElementById("scn");
+    let buttons = document.querySelectorAll("button");
+    let screenValue = "";
+    for (item of buttons) {
+      item.addEventListener("click", (e) => {
+        let buttonText = e.target.innerText;
+        if (buttonText == "X") {
+          buttonText = "*";
+          screenValue += buttonText;
+          screen.value = screenValue;
+        } else if (buttonText == "C") {   
+          screenValue = "";
+          screen.value = screenValue;
+        } else if (buttonText == "=") {
+          screen.value = eval(screenValue);
+        }  else if (buttonText === "Del") {
+            screen.value = screen.value.slice(0, -1);
+          }  else {
+          screenValue += buttonText;
+          screen.value = screenValue;
+        }
+      });
     }
-  }
-});
-});
+  });
+  
